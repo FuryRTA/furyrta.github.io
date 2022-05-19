@@ -1,0 +1,141 @@
+button {
+    border-color: #ff9c2b;
+    background-color: #fff3e6;
+    font-family: 'Monospace','sans-serif';
+    font-style: italic;
+    font-weight: bold;
+}
+#txt {
+    font-size: 10px;
+    visibility: hidden;
+    display: block;
+    color: #fff;
+}
+a:-webkit-any-link {
+    color: #ff3333;
+}
+hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#background {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#texture {
+  filter: saturate(100%) brightness(100%) opacity(80%);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-image: url("https://furyrta.github.io/background_images/texture.png");
+}
+
+.icon-wrapper {
+  z-index: 100;
+  position: relative;
+}
+
+.terra {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 100;
+}
+
+@font-face {font-family: Calamity;src: url(https://furyrta.github.io/CALAMITY-BOLD.TTF);}
+.big1 {
+  font-size: 60px;
+  margin-top: 50px;  
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Calamity','sans-serif';
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 55rem 1fr;
+    grid-template-rows: 0rem auto;
+}
+
+#main {
+    box-sizing: border-box;
+    display: block;
+    border-radius: .5rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 55rem;
+}
+#inner {
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 10px;
+    /* width: 45rem;*/
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 .2rem .2rem .2rem;
+    line-height: 28px;
+    position: relative;
+    z-index: 6;
+    height: auto;
+    overflow: hidden;
+    background-origin: border-box;
+}
+.icon {
+    height: 35px;
+    padding: 5px;
+}
+.icon:hover, a:hover, button:hover {
+    animation: flash 2s linear infinite;
+}
+.widget {
+    background-color: rgba(0,0,0,.3);
+    border-radius:10px;
+    display: inline-block;
+    align-items: center;
+    position: inherit;
+    height: 1.8rem;
+    padding-right: 10px;
+    margin-left: 20px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+.widget > img {
+    height: 70%;
+    vertical-align: -.21em;
+    
+}
+.crop {
+    border-radius: 100%;
+}
+.fadein {
+    animation: normal fadein 1s linear;
+}
+@keyframes flash {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(180deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+    
+}
