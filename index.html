@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - furyrta.github.io</title>
+    <meta name="description" content="FuryRTA's website; This is where I post all of my coding projects!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://furyrta.github.io/" />
+    <meta property="og:title" content="FuryRTA.github.io" />
+    <meta property="og:image" content="https://furyrta.github.io/furyrta_logo.png" />
+    <link rel="stylesheet" href="main.css" />
+	  <link rel="stylesheet" href="js/box.css" />
+    <script src="js/regex_html_parser.js"></script>
+    <script src="js/drag.js"></script>
+    <script src="js/alert.js"></script>
+</head>
+
+<body>
+    <div id="background"></div>
+    <div id="texture"></div>
+    <div class="terra"><p id="txt">This is my cat!<br>Her name is Terra!</p><img src="terra.png" onclick="show_cat()" /></div>
+
+    <div id="main">
+        <a href='https://www.youtube.com/channel/UCW48XkukjQ20PqKD4w6wavQ'   class="icon-wrapper" target="_blank"><img src="resources/youtube.png" class="icon" /></a>
+        <a href='https://twitch.tv/FuryRTA'   class="icon-wrapper" target="_blank"><img src="resources/twitch.png" class="icon" /></a>
+        <a href='https://github.com/FuryRTA'   class="icon-wrapper" target="_blank"><img src="resources/github.png" class="icon" /></a>
+        <a href='https://www.speedrun.com/user/FuryRTA'   class="icon-wrapper" target="_blank"><img src="resources/src.png" class="icon" /></a>
+        <div id="inner">
+            <h1><span class='big1'>Hello!&nbsp;</span> I'm FuryRTA!</h1>
+            <p>I'm a Breath of the Wild and Xenoblade 2 speedrunner and newbie programmer!</p>
+            <p>I am learning HTML and JS at the moment.</p>
+      
+            <hr />
+            <p>Buttons that definitely won't alter the site in any way</p>
+            <button onclick="Button1()">RGB</button>
+            <button onclick="Button2()">Plug</button>
+            <button onclick="Button3()">Parse HTML with Regex</button>
+            <script>
+                let NUMBER_OF_IMAGES = 15;
+                window.onload = () => {
+                    let img_url = `url("https://furyrta.github.io/background_images/${(Math.floor(Math.random()*NUMBER_OF_IMAGES) + 1)}.png") no-repeat`;
+                    let bg = document.querySelector('#background');
+                    bg.style.background = img_url;
+                    bg.style.backgroundSize = 'cover';
+		
+			
+                }
+                let show_cat = _ => {
+                    document.querySelector('#txt').style.visibility = 'visible';
+                }
+                let Button1 = _ => {
+                    [...document.querySelectorAll("*")].forEach(x=>x.style.animation = 'infinite flash linear 2s')
+                }
+                let Button2 = _ => {
+                    [...document.querySelectorAll("*")].forEach(x=>{
+                        if(["BUTTON","P","SPAN","H1"].includes(x.tagName))x.innerText='plz subscribe'
+                    })
+				}
+                let Button3 = parse_html_with_regex;
+         
+            document.querySelector('#inner').innerHTML += '<br>'.repeat(10);
+            
+            </script>
+        </div>
+    </div>  
+</body>  
+</html>
