@@ -1,4 +1,4 @@
-function parse_html_with_regex() {
+function bsod() {
     let x = 0;
     let z = setInterval(_ => {
       x++;
